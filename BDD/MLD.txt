@@ -1,0 +1,20 @@
+MLD - Projet C# GSB (version corrigée)
+
+PERSONNEL = (idPersonnel INT, matricule VARCHAR(10), nom VARCHAR(50), prenom VARCHAR(50), adresse VARCHAR(150), dateEmbauche DATE, login VARCHAR(50), motDePasse VARCHAR(64), role VARCHAR(20));
+TECHNICIEN = (#idPersonnel, niveauIntervention INT, formation VARCHAR(100), competences VARCHAR(255));
+FOURNISSEUR = (idFournisseur INT, nomFournisseur VARCHAR(50), adresse VARCHAR(150), telephone VARCHAR(20), typeFournisseur VARCHAR(20));
+REGION = (idRegion INT, libelleRegion VARCHAR(50));
+MATERIEL = (idMateriel INT, typeMateriel VARCHAR(50), composants VARCHAR(255), logicielsInstalles VARCHAR(255), dateAcquisition DATE, garantie VARCHAR(50), modeAcquisition VARCHAR(20), #idPersonnel*, #idFournisseur*);
+INCIDENT = (idIncident INT, objet VARCHAR(100), description TEXT, niveauUrgence INT, niveauDemande INT, dateDeclaration DATETIME, datePriseEnCharge DATETIME, dateResolution DATETIME, etat VARCHAR(30), typePriseEnCharge VARCHAR(30), #idTechnicien*, #idDeclarant, #idMateriel);
+INTERVENTION = (idIntervention INT, dateIntervention DATE, heureDebut TIME, heureFin TIME, travailRealise TEXT, #idIncident, #idTechnicien);
+AFFECTER = (#idPersonnel, #idRegion, dateAffectation DATE);
+
+Changements par rapport à la première version :
+- tous les identifiants sont en AUTO_INCREMENT
+- INCIDENT : idPersonnel renommé idTechnicien, idPersonnel_1 renommé idDeclarant
+- INCIDENT : dateDeclaration passe en DATETIME (horodatage automatique)
+- INCIDENT : ajout de datePriseEnCharge et dateResolution (pour les statistiques)
+- INTERVENTION : idPersonnel renommé idTechnicien
+- colonnes de texte agrandies (description, travailRealise, composants...)
+- motDePasse en VARCHAR(64) pour stocker le mot de passe crypté (SHA2)
+- table Affecter renommée AFFECTER (tout en majuscules comme les autres)
