@@ -1,0 +1,439 @@
+<mxfile host="Electron" type="device">
+  <diagram id="classes-gsb" name="Diagramme de classes">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Personnel" value="Personnel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="330" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_a0" value="+ IdPersonnel : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="30" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_a1" value="+ Matricule : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="50" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_a2" value="+ Nom : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="70" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_a3" value="+ Prenom : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="90" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_a4" value="+ Adresse : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="110" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_a5" value="+ DateEmbauche : DateTime?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="130" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_a6" value="+ Login : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="150" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_a7" value="+ Role : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="170" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="190" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_m0" value="+ Personnel()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="198" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_m1" value="+ Personnel(idPersonnel, matricule, nom, prenom, adresse, dateEmbauche, login, role)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="218" width="330" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_m2" value="+ GenererMatricule() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="253" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Personnel_m3" value="+ ToString() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Personnel" vertex="1">
+          <mxGeometry x="0" y="273" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Technicien" value="Technicien" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="20" y="398" width="330" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="Technicien_a0" value="+ NiveauIntervention : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Technicien" vertex="1">
+          <mxGeometry x="0" y="30" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Technicien_a1" value="+ Formation : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Technicien" vertex="1">
+          <mxGeometry x="0" y="50" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Technicien_a2" value="+ Competences : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Technicien" vertex="1">
+          <mxGeometry x="0" y="70" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Technicien_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Technicien" vertex="1">
+          <mxGeometry x="0" y="90" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Technicien_m0" value="+ Technicien()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Technicien" vertex="1">
+          <mxGeometry x="0" y="98" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Technicien_m1" value="+ Technicien(idPersonnel, matricule, nom, prenom, adresse, dateEmbauche, login, niveauIntervention, formation, competences)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Technicien" vertex="1">
+          <mxGeometry x="0" y="118" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Technicien_m2" value="+ ToString() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Technicien" vertex="1">
+          <mxGeometry x="0" y="168" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="StatTechnicien" value="StatTechnicien" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="20" y="841" width="330" height="153" as="geometry" />
+        </mxCell>
+        <mxCell id="StatTechnicien_a0" value="+ Technicien : Technicien" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="StatTechnicien" vertex="1">
+          <mxGeometry x="0" y="30" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="StatTechnicien_a1" value="+ NbEnCharge : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="StatTechnicien" vertex="1">
+          <mxGeometry x="0" y="50" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="StatTechnicien_a2" value="+ NbResolus : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="StatTechnicien" vertex="1">
+          <mxGeometry x="0" y="70" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="StatTechnicien_a3" value="+ NbHeures : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="StatTechnicien" vertex="1">
+          <mxGeometry x="0" y="90" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="StatTechnicien_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="StatTechnicien" vertex="1">
+          <mxGeometry x="0" y="110" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="StatTechnicien_m0" value="+ StatTechnicien(technicien, nbEnCharge, nbResolus, nbHeures)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="StatTechnicien" vertex="1">
+          <mxGeometry x="0" y="118" width="330" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel" value="Materiel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="420" y="20" width="340" height="308" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a0" value="+ IdMateriel : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="30" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a1" value="+ TypeMateriel : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="50" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a2" value="+ Composants : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="70" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a3" value="+ LogicielsInstalles : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="90" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a4" value="+ DateAcquisition : DateTime?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="110" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a5" value="+ Garantie : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="130" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a6" value="+ ModeAcquisition : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="150" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a7" value="+ Personnel : Personnel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="170" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_a8" value="+ Fournisseur : Fournisseur" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="190" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="210" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_m0" value="+ Materiel()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="218" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_m1" value="+ Materiel(idMateriel, typeMateriel, composants, logicielsInstalles, dateAcquisition, garantie, modeAcquisition, personnel, fournisseur)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="238" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Materiel_m2" value="+ ToString() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Materiel" vertex="1">
+          <mxGeometry x="0" y="288" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident" value="Incident" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="420" y="398" width="340" height="373" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a0" value="+ IdIncident : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="30" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a1" value="+ Objet : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="50" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a2" value="+ Description : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="70" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a3" value="+ NiveauUrgence : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="90" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a4" value="+ NiveauDemande : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="110" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a5" value="+ DateDeclaration : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="130" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a6" value="+ DatePriseEnCharge : DateTime?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="150" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a7" value="+ DateResolution : DateTime?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="170" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a8" value="+ Etat : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="190" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a9" value="+ TypePriseEnCharge : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="210" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a10" value="+ Declarant : Personnel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="230" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a11" value="+ Technicien : Technicien" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="250" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_a12" value="+ Materiel : Materiel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="270" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="290" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_m0" value="+ Incident()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="298" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_m1" value="+ Incident(objet, description, niveauUrgence, niveauDemande, declarant, materiel)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="318" width="340" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Incident_m2" value="+ ToString() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Incident" vertex="1">
+          <mxGeometry x="0" y="353" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention" value="Intervention" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="420" y="841" width="340" height="273" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_a0" value="+ IdIntervention : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="30" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_a1" value="+ DateIntervention : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="50" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_a2" value="+ HeureDebut : TimeSpan" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="70" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_a3" value="+ HeureFin : TimeSpan" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="90" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_a4" value="+ TravailRealise : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="110" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_a5" value="+ Incident : Incident" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="130" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_a6" value="+ Technicien : Technicien" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="150" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="170" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_m0" value="+ Intervention()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="178" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_m1" value="+ Intervention(idIntervention, dateIntervention, heureDebut, heureFin, travailRealise, incident, technicien)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="198" width="340" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_m2" value="+ DureeEnHeures() : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="233" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Intervention_m3" value="+ ToString() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Intervention" vertex="1">
+          <mxGeometry x="0" y="253" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur" value="Fournisseur" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="830" y="20" width="300" height="213" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_a0" value="+ IdFournisseur : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_a1" value="+ NomFournisseur : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="50" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_a2" value="+ Adresse : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="70" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_a3" value="+ Telephone : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="90" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_a4" value="+ TypeFournisseur : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="110" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="130" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_m0" value="+ Fournisseur()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="138" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_m1" value="+ Fournisseur(idFournisseur, nomFournisseur, adresse, telephone, typeFournisseur)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="158" width="300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Fournisseur_m2" value="+ ToString() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Fournisseur" vertex="1">
+          <mxGeometry x="0" y="193" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Region" value="Region" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="830" y="398" width="300" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="Region_a0" value="+ IdRegion : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Region" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Region_a1" value="+ LibelleRegion : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Region" vertex="1">
+          <mxGeometry x="0" y="50" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Region_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Region" vertex="1">
+          <mxGeometry x="0" y="70" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Region_m0" value="+ Region(idRegion, libelleRegion)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Region" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Region_m1" value="+ ToString() : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Region" vertex="1">
+          <mxGeometry x="0" y="98" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques" value="Statistiques" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="830" y="841" width="300" height="253" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_a0" value="+ NbIncidents : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_a1" value="+ NbDeclares : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="50" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_a2" value="+ NbEnCharge : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="70" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_a3" value="+ NbResolus : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="90" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_a4" value="+ PourcentageDeclares : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="110" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_a5" value="+ PourcentageEnCharge : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="130" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_a6" value="+ PourcentageResolus : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="150" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_a7" value="+ DelaiMoyenJours : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="170" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="190" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_m0" value="+ Statistiques(nbDeclares, nbEnCharge, nbResolus, delaiMoyenJours)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="198" width="300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Statistiques_m1" value="- Pourcentage(nb : int) : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Statistiques" vertex="1">
+          <mxGeometry x="0" y="233" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd" value="«static»&lt;br&gt;Bdd" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7FD0F5;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="20" width="440" height="633" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_a0" value="+ ChaineConnexion : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="30" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="50" width="440" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m0" value="+ GetPersonnels(role : string) : List&amp;lt;Personnel&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="58" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m1" value="+ GetTechniciens() : List&amp;lt;Technicien&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="78" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m2" value="+ AjouterPersonnel(p : Personnel, motDePasse : string) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="98" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m3" value="+ AjouterTechnicien(t : Technicien, motDePasse : string) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="118" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m4" value="+ ModifierPersonnel(p : Personnel) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="138" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m5" value="+ ModifierTechnicien(t : Technicien) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="158" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m6" value="+ ModifierMotDePasse(p : Personnel, nouveauMotDePasse : string) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="178" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m7" value="+ SupprimerPersonnel(p : Personnel) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="198" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m8" value="+ GetRegions() : List&amp;lt;Region&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="218" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m9" value="+ GetRegionActuelle(p : Personnel) : Region" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="238" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m10" value="+ AffecterRegion(p : Personnel, r : Region) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="258" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m11" value="+ GetFournisseurs() : List&amp;lt;Fournisseur&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="278" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m12" value="+ GetMateriels() : List&amp;lt;Materiel&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="298" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m13" value="+ GetMaterielsDuPersonnel(p : Personnel) : List&amp;lt;Materiel&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="318" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m14" value="+ AjouterMateriel(m : Materiel) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="338" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m15" value="+ SupprimerMateriel(m : Materiel) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="358" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m16" value="+ DeclarerIncident(i : Incident) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="378" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m17" value="+ GetIncidentsDuDeclarant(p : Personnel) : List&amp;lt;Incident&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="398" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m18" value="+ GetIncidentsPourTechnicien(t : Technicien) : List&amp;lt;Incident&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="418" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m19" value="+ PrendreEnCharge(i : Incident, t : Technicien, typePriseEnCharge : string) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="438" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m20" value="+ ResoudreIncident(i : Incident) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="458" width="440" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m21" value="+ CloturerIncident(i : Incident) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="493" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m22" value="+ AjouterIntervention(v : Intervention) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="513" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m23" value="+ GetInterventions(i : Incident) : List&amp;lt;Intervention&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="533" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m24" value="+ GetStatistiques() : Statistiques" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="553" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m25" value="+ GetStatsTechniciens() : List&amp;lt;StatTechnicien&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="573" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m26" value="+ GetNbIncidents(p : Personnel) : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="593" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bdd_m27" value="+ SauvegarderBase() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#000000;" parent="Bdd" vertex="1">
+          <mxGeometry x="0" y="613" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rel0" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" parent="1" source="Technicien" target="Personnel" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" value="Personnel 0..1" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0;exitY=0.25;entryX=1;entryY=0.25;" parent="1" source="Materiel" target="Personnel" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" value="Fournisseur 0..1" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" parent="1" source="Materiel" target="Fournisseur" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" value="Materiel 1" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" parent="1" source="Incident" target="Materiel" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" value="Declarant 1" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0;exitY=0.06;entryX=1;entryY=0.85;" parent="1" source="Incident" target="Personnel" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" value="Technicien 0..1" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0;exitY=0.35;entryX=1;entryY=0.3;" parent="1" source="Incident" target="Technicien" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" value="Incident 1" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" parent="1" source="Intervention" target="Incident" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7" value="Technicien 1" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0;exitY=0.2;entryX=1;entryY=0.8;" parent="1" source="Intervention" target="Technicien" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8" value="Technicien 1" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" parent="1" source="StatTechnicien" target="Technicien" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel9" value="«crée»" style="endArrow=open;endSize=10;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;dashed=1;exitX=0;exitY=0.9;entryX=1;entryY=0.5;" parent="1" source="Bdd" target="Statistiques" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
