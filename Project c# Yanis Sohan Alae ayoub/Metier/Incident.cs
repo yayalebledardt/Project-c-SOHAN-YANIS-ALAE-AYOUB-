@@ -1,5 +1,8 @@
 ﻿namespace Project_c__Yanis_Sohan_Alae_ayoub
 {
+    /// <summary>
+    /// ce code permet de stocker les infos sur un incident
+    /// </summary>
     public class Incident
     {
         public int IdIncident { get; set; }
@@ -16,10 +19,23 @@
         public Technicien Technicien { get; set; }
         public Materiel Materiel { get; set; }
 
+        /// <summary>
+        /// ce code permet de créer un incident vide
+        /// </summary>
         public Incident()
         {
         }
 
+        /// <summary>
+        /// ce code permet de créer un nouvel incident
+        /// il est mis en enregistrée avec la date de maintenant
+        /// </summary>
+        /// <param name="objet">le titre du problème</param>
+        /// <param name="description">le problème expliqué</param>
+        /// <param name="niveauUrgence">1 faible 2 moyenne 3 urgente</param>
+        /// <param name="niveauDemande">1 ou 2</param>
+        /// <param name="declarant">la personne qui déclare</param>
+        /// <param name="materiel">le matériel en panne</param>
         public Incident(string objet, string description, int niveauUrgence, int niveauDemande, Personnel declarant, Materiel materiel)
         {
             Objet = objet;
@@ -32,6 +48,10 @@
             DateDeclaration = DateTime.Now;
         }
 
+        /// <summary>
+        /// ce code permet de montrer un incident dans une liste
+        /// </summary>
+        /// <returns>le numéro le titre et son état</returns>
         public override string ToString()
         {
             return "n°" + IdIncident + " - " + Objet + " (" + Etat + ")";

@@ -1,12 +1,23 @@
 namespace Project_c__Yanis_Sohan_Alae_ayoub
 {
+    /// <summary>
+    /// ce code permet de gérer la fenêtre utilisateur
+    /// </summary>
     public partial class FormUtilisateur : Form
     {
+        /// <summary>
+        /// ce code permet de créer la fenêtre
+        /// </summary>
         public FormUtilisateur()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// ce code permet de remplir la liste des utilisateurs quand la fenêtre se lance
+        /// </summary>
+        /// <param name="sender">la fenêtre</param>
+        /// <param name="e">les infos du chargement</param>
         private void FormUtilisateur_Load(object sender, EventArgs e)
         {
             cboUrgence.SelectedIndex = 0;
@@ -25,6 +36,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de charger le matériel et les incidents quand on choisit un utilisateur
+        /// </summary>
+        /// <param name="sender">la liste déroulante</param>
+        /// <param name="e">les infos du changement</param>
         private void cboUtilisateur_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -38,6 +54,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de remplir la liste du matériel
+        /// </summary>
         private void ChargerMateriels()
         {
             cboMateriel.Items.Clear();
@@ -55,6 +74,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de remplir le tableau des incidents
+        /// </summary>
         private void ChargerIncidents()
         {
             dgvIncidents.Rows.Clear();
@@ -70,6 +92,10 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             AfficherDetail();
         }
 
+        /// <summary>
+        /// ce code permet de savoir quel incident est choisi dans le tableau
+        /// </summary>
+        /// <returns>incident choisi ou null si il y en a pas</returns>
         private Incident IncidentSelectionne()
         {
             if (dgvIncidents.SelectedRows.Count == 0)
@@ -79,11 +105,19 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             return (Incident)dgvIncidents.SelectedRows[0].Tag;
         }
 
+        /// <summary>
+        /// ce code permet de montrer le détail quand on clique sur une ligne
+        /// </summary>
+        /// <param name="sender">le tableau</param>
+        /// <param name="e">les infos du clic</param>
         private void dgvIncidents_SelectionChanged(object sender, EventArgs e)
         {
             AfficherDetail();
         }
 
+        /// <summary>
+        /// ce code permet de montrer le détail et les interventions dans la zone de texte
+        /// </summary>
         private void AfficherDetail()
         {
             Incident i = IncidentSelectionne();
@@ -133,6 +167,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             txtDetail.Text = texte;
         }
 
+        /// <summary>
+        /// ce code permet de déclarer un incident
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnDeclarer_Click(object sender, EventArgs e)
         {
             if (cboUtilisateur.SelectedItem == null)

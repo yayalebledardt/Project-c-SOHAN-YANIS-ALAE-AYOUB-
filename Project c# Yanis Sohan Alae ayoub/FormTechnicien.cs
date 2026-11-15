@@ -1,12 +1,23 @@
 namespace Project_c__Yanis_Sohan_Alae_ayoub
 {
+    /// <summary>
+    /// ce code permet de gérer la fenêtre technicien
+    /// </summary>
     public partial class FormTechnicien : Form
     {
+        /// <summary>
+        /// ce code permet de créer la fenêtre
+        /// </summary>
         public FormTechnicien()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// ce code permet de remplir les listes quand la fenêtre se lance
+        /// </summary>
+        /// <param name="sender">la fenêtre</param>
+        /// <param name="e">les infos du chargement</param>
         private void FormTechnicien_Load(object sender, EventArgs e)
         {
             cboTypePriseEnCharge.SelectedIndex = 0;
@@ -31,6 +42,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de charger les incidents quand on choisit un technicien
+        /// </summary>
+        /// <param name="sender">la liste déroulante</param>
+        /// <param name="e">les infos du changement</param>
         private void cboTechnicien_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -43,6 +59,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de remplir le tableau des incidents du technicien
+        /// </summary>
         private void ChargerIncidents()
         {
             dgvIncidents.Rows.Clear();
@@ -64,6 +83,10 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             AfficherDetail();
         }
 
+        /// <summary>
+        /// ce code permet de remettre la sélection sur un incident dans le tableau
+        /// </summary>
+        /// <param name="idIncident">le numéro à retrouver</param>
         private void SelectionnerIncident(int idIncident)
         {
             foreach (DataGridViewRow ligne in dgvIncidents.Rows)
@@ -76,6 +99,10 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de savoir quel incident est choisi dans le tableau
+        /// </summary>
+        /// <returns>incident choisi ou null si il y en a pas</returns>
         private Incident IncidentSelectionne()
         {
             if (dgvIncidents.SelectedRows.Count == 0)
@@ -85,11 +112,20 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             return (Incident)dgvIncidents.SelectedRows[0].Tag;
         }
 
+        /// <summary>
+        /// ce code permet de montrer le détail quand on clique sur une ligne
+        /// </summary>
+        /// <param name="sender">le tableau</param>
+        /// <param name="e">les infos du clic</param>
         private void dgvIncidents_SelectionChanged(object sender, EventArgs e)
         {
             AfficherDetail();
         }
 
+        /// <summary>
+        /// ce code permet de montrer le détail et les interventions dans la zone de texte
+        /// si le matériel est loué on montre une alerte avec le loueur
+        /// </summary>
         private void AfficherDetail()
         {
             Incident i = IncidentSelectionne();
@@ -140,6 +176,12 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             txtDetail.Text = texte;
         }
 
+        /// <summary>
+        /// ce code permet de vérifier que cet incident est en cours et pris par ce technicien
+        /// </summary>
+        /// <param name="i">un incident de la liste</param>
+        /// <param name="t">le technicien choisi</param>
+        /// <returns>true si oui sinon false</returns>
         private bool EstMonIncidentEnCours(Incident i, Technicien t)
         {
             if (i.Etat != "En cours de traitement")
@@ -153,6 +195,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             return i.Technicien.IdPersonnel == t.IdPersonnel;
         }
 
+        /// <summary>
+        /// ce code permet de prendre en charge un incident
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnPrendreEnCharge_Click(object sender, EventArgs e)
         {
             Technicien t = (Technicien)cboTechnicien.SelectedItem;
@@ -180,6 +227,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de rajouter une intervention sur un incident
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnAjouterIntervention_Click(object sender, EventArgs e)
         {
             Technicien t = (Technicien)cboTechnicien.SelectedItem;
@@ -217,6 +269,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de passer un incident en résolue
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnResolu_Click(object sender, EventArgs e)
         {
             Technicien t = (Technicien)cboTechnicien.SelectedItem;
@@ -250,6 +307,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de passer un incident en clôturée
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnCloturer_Click(object sender, EventArgs e)
         {
             Incident i = IncidentSelectionne();
@@ -276,6 +338,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de remplir les listes des personnes et des fournisseurs
+        /// </summary>
         private void ChargerListesMateriel()
         {
             cboPersonnel.Items.Clear();
@@ -301,6 +366,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             cboFournisseur.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// ce code permet de remplir le tableau du matériel
+        /// </summary>
         private void ChargerMateriels()
         {
             dgvMateriels.Rows.Clear();
@@ -325,6 +393,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de supprimer le matériel choisi
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnSupprimerMateriel_Click(object sender, EventArgs e)
         {
             if (dgvMateriels.SelectedRows.Count == 0)
@@ -352,6 +425,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de rajouter un matériel
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnAjouterMateriel_Click(object sender, EventArgs e)
         {
             if (txtTypeMateriel.Text.Trim() == "")

@@ -1,12 +1,23 @@
 namespace Project_c__Yanis_Sohan_Alae_ayoub
 {
+    /// <summary>
+    /// ce code permet de gérer la fenêtre responsable
+    /// </summary>
     public partial class FormResponsable : Form
     {
+        /// <summary>
+        /// ce code permet de créer la fenêtre
+        /// </summary>
         public FormResponsable()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// ce code permet de remplir les listes les tableaux et les stats quand la fenêtre se lance
+        /// </summary>
+        /// <param name="sender">la fenêtre</param>
+        /// <param name="e">les infos du chargement</param>
         private void FormResponsable_Load(object sender, EventArgs e)
         {
             cboNiveauT.SelectedIndex = 0;
@@ -30,6 +41,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de donner un message clair quand il y a une erreur
+        /// </summary>
+        /// <param name="ex">le problème reçu</param>
+        /// <returns>le message à montrer</returns>
         private string MessageErreur(Exception ex)
         {
             if (ex.Message.Contains("Duplicate"))
@@ -43,6 +59,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             return "Erreur : " + ex.Message;
         }
 
+        /// <summary>
+        /// ce code permet de choisir la bonne région dans une liste
+        /// </summary>
+        /// <param name="cbo">la liste des régions</param>
+        /// <param name="region">la région à choisir</param>
         private void SelectionnerRegion(ComboBox cbo, Region region)
         {
             cbo.SelectedIndex = -1;
@@ -61,6 +82,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de remettre la sélection sur une personne dans un tableau
+        /// </summary>
+        /// <param name="dgv">le tableau</param>
+        /// <param name="idPersonnel">le numéro de la personne</param>
         private void SelectionnerLigne(DataGridView dgv, int idPersonnel)
         {
             foreach (DataGridViewRow ligne in dgv.Rows)
@@ -73,6 +99,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de remplir le tableau des utilisateurs
+        /// </summary>
         private void ChargerUtilisateurs()
         {
             dgvUtilisateurs.Rows.Clear();
@@ -94,6 +123,10 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             AfficherUtilisateur();
         }
 
+        /// <summary>
+        /// ce code permet de savoir quel utilisateur est choisi dans le tableau
+        /// </summary>
+        /// <returns>la personne choisie ou null si il y en a pas</returns>
         private Personnel UtilisateurSelectionne()
         {
             if (dgvUtilisateurs.SelectedRows.Count == 0)
@@ -103,11 +136,19 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             return (Personnel)dgvUtilisateurs.SelectedRows[0].Tag;
         }
 
+        /// <summary>
+        /// ce code permet de remplir la fiche quand on clique sur une ligne
+        /// </summary>
+        /// <param name="sender">le tableau</param>
+        /// <param name="e">les infos du clic</param>
         private void dgvUtilisateurs_SelectionChanged(object sender, EventArgs e)
         {
             AfficherUtilisateur();
         }
 
+        /// <summary>
+        /// ce code permet de remplir la fiche avec les infos de la personne choisie
+        /// </summary>
         private void AfficherUtilisateur()
         {
             Personnel p = UtilisateurSelectionne();
@@ -140,6 +181,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de vider la fiche utilisateur
+        /// </summary>
         private void ViderUtilisateur()
         {
             dgvUtilisateurs.ClearSelection();
@@ -152,11 +196,21 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             cboRegionU.SelectedIndex = -1;
         }
 
+        /// <summary>
+        /// ce code permet de vider la fiche utilisateur
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnViderU_Click(object sender, EventArgs e)
         {
             ViderUtilisateur();
         }
 
+        /// <summary>
+        /// ce code permet de rajouter un utilisateur avec sa région
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnAjouterU_Click(object sender, EventArgs e)
         {
             if (txtNomU.Text.Trim() == "" || txtPrenomU.Text.Trim() == "" || txtLoginU.Text.Trim() == "" || txtMdpU.Text == "")
@@ -186,6 +240,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de modifier un utilisateur
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnModifierU_Click(object sender, EventArgs e)
         {
             Personnel ancien = UtilisateurSelectionne();
@@ -228,6 +287,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de supprimer un utilisateur
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnSupprimerU_Click(object sender, EventArgs e)
         {
             Personnel p = UtilisateurSelectionne();
@@ -255,6 +319,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de remplir le tableau des techniciens
+        /// </summary>
         private void ChargerTechniciens()
         {
             dgvTechniciens.Rows.Clear();
@@ -276,6 +343,10 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             AfficherTechnicien();
         }
 
+        /// <summary>
+        /// ce code permet de savoir quel technicien est choisi dans le tableau
+        /// </summary>
+        /// <returns>le technicien choisi ou null si il y en a pas</returns>
         private Technicien TechnicienSelectionne()
         {
             if (dgvTechniciens.SelectedRows.Count == 0)
@@ -285,11 +356,19 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             return (Technicien)dgvTechniciens.SelectedRows[0].Tag;
         }
 
+        /// <summary>
+        /// ce code permet de remplir la fiche quand on clique sur une ligne
+        /// </summary>
+        /// <param name="sender">le tableau</param>
+        /// <param name="e">les infos du clic</param>
         private void dgvTechniciens_SelectionChanged(object sender, EventArgs e)
         {
             AfficherTechnicien();
         }
 
+        /// <summary>
+        /// ce code permet de remplir la fiche avec les infos du technicien choisi
+        /// </summary>
         private void AfficherTechnicien()
         {
             Technicien t = TechnicienSelectionne();
@@ -325,6 +404,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de vider la fiche technicien
+        /// </summary>
         private void ViderTechnicien()
         {
             dgvTechniciens.ClearSelection();
@@ -340,11 +422,21 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             txtCompetencesT.Text = "";
         }
 
+        /// <summary>
+        /// ce code permet de vider la fiche technicien
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnViderT_Click(object sender, EventArgs e)
         {
             ViderTechnicien();
         }
 
+        /// <summary>
+        /// ce code permet de rajouter un technicien avec sa région
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnAjouterT_Click(object sender, EventArgs e)
         {
             if (txtNomT.Text.Trim() == "" || txtPrenomT.Text.Trim() == "" || txtLoginT.Text.Trim() == "" || txtMdpT.Text == "")
@@ -375,6 +467,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de modifier un technicien
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnModifierT_Click(object sender, EventArgs e)
         {
             Technicien ancien = TechnicienSelectionne();
@@ -418,6 +515,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de supprimer un technicien
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnSupprimerT_Click(object sender, EventArgs e)
         {
             Technicien t = TechnicienSelectionne();
@@ -445,6 +547,9 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de remplir les stats des incidents des utilisateurs et des techniciens
+        /// </summary>
         private void ChargerStatistiques()
         {
             Statistiques s = Bdd.GetStatistiques();
@@ -455,10 +560,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             lblDelai.Text = "Délai moyen de résolution : " + s.DelaiMoyenJours.ToString("0.0") + " jour(s)";
 
             dgvStatsUtilisateurs.Rows.Clear();
-            Dictionary<string, int> parUtilisateur = Bdd.GetNbIncidentsParUtilisateur();
-            foreach (KeyValuePair<string, int> ligne in parUtilisateur)
+            List<Personnel> utilisateurs = Bdd.GetPersonnels("utilisateur");
+            foreach (Personnel p in utilisateurs)
             {
-                dgvStatsUtilisateurs.Rows.Add(ligne.Key, ligne.Value);
+                string nom = p.Nom + " " + p.Prenom + " (" + p.Matricule + ")";
+                dgvStatsUtilisateurs.Rows.Add(nom, Bdd.GetNbIncidents(p));
             }
 
             dgvStatsTechniciens.Rows.Clear();
@@ -470,6 +576,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de recharger les stats
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnActualiser_Click(object sender, EventArgs e)
         {
             try
@@ -482,6 +593,11 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             }
         }
 
+        /// <summary>
+        /// ce code permet de sauvegarder la base dans gsb_sauvegarde
+        /// </summary>
+        /// <param name="sender">le bouton</param>
+        /// <param name="e">les infos du clic</param>
         private void btnSauvegarder_Click(object sender, EventArgs e)
         {
             try
