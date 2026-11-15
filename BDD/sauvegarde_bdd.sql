@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS gsb_sauvegarde;
+CREATE DATABASE gsb_sauvegarde;
+CREATE TABLE gsb_sauvegarde.REGION AS SELECT * FROM gsb_incidents.REGION;
+CREATE TABLE gsb_sauvegarde.FOURNISSEUR AS SELECT * FROM gsb_incidents.FOURNISSEUR;
+CREATE TABLE gsb_sauvegarde.PERSONNEL AS SELECT * FROM gsb_incidents.PERSONNEL;
+CREATE TABLE gsb_sauvegarde.TECHNICIEN AS SELECT * FROM gsb_incidents.TECHNICIEN;
+CREATE TABLE gsb_sauvegarde.AFFECTER AS SELECT * FROM gsb_incidents.AFFECTER;
+CREATE TABLE gsb_sauvegarde.MATERIEL AS SELECT * FROM gsb_incidents.MATERIEL;
+CREATE TABLE gsb_sauvegarde.INCIDENT AS SELECT * FROM gsb_incidents.INCIDENT;
+CREATE TABLE gsb_sauvegarde.INTERVENTION AS SELECT * FROM gsb_incidents.INTERVENTION;

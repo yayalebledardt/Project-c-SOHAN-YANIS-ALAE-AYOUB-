@@ -106,6 +106,7 @@
             colResolus = new DataGridViewTextBoxColumn();
             colHeures = new DataGridViewTextBoxColumn();
             btnActualiser = new Button();
+            btnSauvegarder = new Button();
             tabControl1.SuspendLayout();
             tabUtilisateurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUtilisateurs).BeginInit();
@@ -677,6 +678,7 @@
             // 
             // tabStatistiques
             // 
+            tabStatistiques.Controls.Add(btnSauvegarder);
             tabStatistiques.Controls.Add(btnActualiser);
             tabStatistiques.Controls.Add(grpStatsTechniciens);
             tabStatistiques.Controls.Add(grpStatsUtilisateurs);
@@ -853,6 +855,16 @@
             btnActualiser.UseVisualStyleBackColor = true;
             btnActualiser.Click += btnActualiser_Click;
             // 
+            // btnSauvegarder
+            // 
+            btnSauvegarder.Location = new Point(170, 500);
+            btnSauvegarder.Name = "btnSauvegarder";
+            btnSauvegarder.Size = new Size(200, 30);
+            btnSauvegarder.TabIndex = 4;
+            btnSauvegarder.Text = "Sauvegarder la base";
+            btnSauvegarder.UseVisualStyleBackColor = true;
+            btnSauvegarder.Click += btnSauvegarder_Click;
+            // 
             // FormResponsable
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -968,5 +980,6 @@
         private DataGridViewTextBoxColumn colResolus;
         private DataGridViewTextBoxColumn colHeures;
         private Button btnActualiser;
+        private Button btnSauvegarder;
     }
 }

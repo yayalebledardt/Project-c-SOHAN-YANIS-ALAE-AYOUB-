@@ -481,5 +481,18 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
                 MessageBox.Show("Erreur : " + ex.Message);
             }
         }
+
+        private void btnSauvegarder_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Bdd.SauvegarderBase();
+                MessageBox.Show("La base a été sauvegardée dans gsb_sauvegarde.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message);
+            }
+        }
     }
 }

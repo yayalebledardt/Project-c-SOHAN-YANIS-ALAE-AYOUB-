@@ -621,6 +621,26 @@ namespace Project_c__Yanis_Sohan_Alae_ayoub
             return stats;
         }
 
+        public static void SauvegarderBase()
+        {
+            using (MySqlConnection cnx = new MySqlConnection(ChaineConnexion))
+            {
+                cnx.Open();
+                string requete = "DROP DATABASE IF EXISTS gsb_sauvegarde; "
+                    + "CREATE DATABASE gsb_sauvegarde; "
+                    + "CREATE TABLE gsb_sauvegarde.REGION AS SELECT * FROM REGION; "
+                    + "CREATE TABLE gsb_sauvegarde.FOURNISSEUR AS SELECT * FROM FOURNISSEUR; "
+                    + "CREATE TABLE gsb_sauvegarde.PERSONNEL AS SELECT * FROM PERSONNEL; "
+                    + "CREATE TABLE gsb_sauvegarde.TECHNICIEN AS SELECT * FROM TECHNICIEN; "
+                    + "CREATE TABLE gsb_sauvegarde.AFFECTER AS SELECT * FROM AFFECTER; "
+                    + "CREATE TABLE gsb_sauvegarde.MATERIEL AS SELECT * FROM MATERIEL; "
+                    + "CREATE TABLE gsb_sauvegarde.INCIDENT AS SELECT * FROM INCIDENT; "
+                    + "CREATE TABLE gsb_sauvegarde.INTERVENTION AS SELECT * FROM INTERVENTION;";
+                MySqlCommand cmd = new MySqlCommand(requete, cnx);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         private static void RemplirPersonnel(Personnel p, MySqlDataReader reader)
         {
             p.IdPersonnel = Convert.ToInt32(reader["idPersonnel"]);
