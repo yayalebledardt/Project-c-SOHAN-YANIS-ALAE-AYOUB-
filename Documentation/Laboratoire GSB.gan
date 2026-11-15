@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Laboratoire GSB" company="" webLink="http://" view-date="2026-10-27" view-index="1" gantt-divider-location="351" resource-divider-location="300" version="3.3.3322" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd15" name="Notes" width="20" order="-1"/>
+        <field id="tpd3" name="Nom" width="200" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#ff9999 #6699ff #6666ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="2026" month="11" date="15" type="WORKING_DAY"/>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="be3e395fedcd4e79aba34dae1517f77d" name="Structure BD + prototype + Gantt prévisionnel" color="#6666ff" meeting="false" start="2026-11-03" duration="1" complete="0" expand="true"/>
+        <task id="1" uid="83084b2be8e1415ea956381684635225" name="Mise en place BD + classes métier" color="#6699ff" meeting="false" start="2026-11-05" duration="1" complete="0" expand="true"/>
+        <task id="2" uid="bb9c3a9c66d74862bff776d5c9844e29" name="Classe BD + programme principal" meeting="false" start="2026-11-10" duration="1" complete="0" expand="true"/>
+        <task id="6" uid="4e50f1ea07f744a19d77c72a839298a7" name="Mise en place BD + classe BD + programme principal + débug + set-up" meeting="false" start="2026-11-10" duration="1" complete="0" expand="true"/>
+        <task id="7" uid="59030cbb5cb1450e9431f1670dc63a9a" name="Classes BD + programme principal + rapport" meeting="false" start="2026-11-10" duration="1" complete="0" expand="true"/>
+        <task id="3" uid="dce076c5b07c4527aba48faebad998c2" name="Classe BD + programme principal" meeting="false" start="2026-11-12" duration="1" complete="0" expand="true"/>
+        <task id="8" uid="af08e4cd522b41b9aab2ff3223155251" name="Mise en place du rapport" color="#ff9999" meeting="false" start="2026-11-15" duration="1" complete="0" expand="true"/>
+        <task id="5" uid="8eaea9f14a664934a54ea0f7b9d642b1" name="Débug + rapport + set-up + Gantt réel" color="#ff9999" meeting="false" start="2026-11-19" duration="1" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Sohan" function="Default:1" contacts="" phone=""/>
+        <resource id="1" name="Yanis" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Alae" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Ayoub" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="2" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="1" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="6" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="8" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
