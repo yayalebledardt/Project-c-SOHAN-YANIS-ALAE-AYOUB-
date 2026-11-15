@@ -1,26 +1,11 @@
--- ==========================================================
--- Projet C# - GSB : gestion du matériel et des incidents
--- Script de création de la base de données (MySQL / MariaDB)
---
--- ATTENTION : le script supprime la base si elle existe déjà,
--- toutes les données sont perdues à chaque exécution.
---
--- Comptes de test (mot de passe pour tous : azerty) :
---   responsable : smartin
---   techniciens : pdurand (niveau 1, Paris-Centre)
---                 lbernard (niveau 1, Sud)
---                 kpetit (niveau 2)
---   utilisateurs : jdupont, crobert, tmoreau, elaurent
--- ==========================================================
+-- comptes de test, mot de passe pour tous : azerty
 
 DROP DATABASE IF EXISTS gsb_incidents;
 CREATE DATABASE gsb_incidents CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE gsb_incidents;
 
 
--- ==========================================================
 -- 1. Création des tables
--- ==========================================================
 
 -- role : 'utilisateur', 'technicien' ou 'responsable'
 -- motDePasse : mot de passe crypté avec SHA2 (64 caractères)
@@ -138,9 +123,7 @@ CREATE TABLE AFFECTER(
 );
 
 
--- ==========================================================
 -- 2. Données de test
--- ==========================================================
 
 INSERT INTO REGION (libelleRegion) VALUES
 ('Paris-Centre'),
@@ -213,16 +196,14 @@ INSERT INTO INTERVENTION (dateIntervention, heureDebut, heureFin, travailRealise
 ('2026-10-21', '08:30:00', '09:15:00', 'Vérification du compte VPN, problème de certificat.', 4, 4);
 
 
--- ==========================================================
 -- 3. Triggers
--- ==========================================================
 
 DELIMITER //
 
 -- Trigger 1 : quand on modifie un incident
---  - si on lui affecte un technicien, on enregistre la date de prise en charge
---    et l'incident passe "En cours de traitement"
---  - s'il passe "Résolue", on enregistre la date de résolution
+-- si on lui affecte un technicien, on enregistre la date de prise en charge
+-- et l'incident passe "En cours de traitement"
+-- s'il passe "Résolue", on enregistre la date de résolution
 CREATE TRIGGER trg_incident_maj
 BEFORE UPDATE ON INCIDENT
 FOR EACH ROW
