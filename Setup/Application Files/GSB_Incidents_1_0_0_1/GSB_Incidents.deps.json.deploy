@@ -7,12 +7,12 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {},
     ".NETCoreApp,Version=v10.0/win-x64": {
-      "Project c# Yanis Sohan Alae ayoub/1.0.0": {
+      "GSB_Incidents/1.0.0": {
         "dependencies": {
           "MySql.Data": "26.10.0"
         },
         "runtime": {
-          "Project c# Yanis Sohan Alae ayoub.dll": {}
+          "GSB_Incidents.dll": {}
         }
       },
       "BouncyCastle.Cryptography/2.6.2": {
@@ -101,7 +101,7 @@
     }
   },
   "libraries": {
-    "Project c# Yanis Sohan Alae ayoub/1.0.0": {
+    "GSB_Incidents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
